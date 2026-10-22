@@ -1,0 +1,45 @@
+# Entornos virtuales (se recrean en cada Raspberry).
+.venv/
+venv/
+env/
+
+# Python y caches de herramientas.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Datos generados por la camara: videos, eventos, estrellas y fotos.
+/grabaciones/
+/capturas/
+
+# Pruebas manuales, resultados e instaladores temporales.
+/work/
+/outputs/
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# Variables privadas. Se pueden versionar plantillas sin secretos.
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Configuracion local de editores y archivos del sistema operativo.
+/.vscode/
+/.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Distribuciones generadas si el proyecto se empaqueta en el futuro.
+/build/
+/dist/
+*.egg-info/

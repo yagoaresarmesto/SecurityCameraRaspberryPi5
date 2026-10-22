@@ -1,0 +1,7 @@
+# Dependencia web. Se reutiliza la version de APT si satisface este rango.
+Flask>=3.1,<4
+
+# Camara y calculo: instalar con APT, NO con pip (ver INSTALACION.md).
+# python3-picamera2, python3-av, python3-numpy, python3-pil
+# Tambien hacen falta python3-venv, ffmpeg y rpicam-apps.
+# Crear .venv con el Python del sistema y --system-site-packages.

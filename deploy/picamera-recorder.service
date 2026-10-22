@@ -1,0 +1,25 @@
+[Unit]
+Description=PiCameraRecorder - camera and continuous recording
+After=local-fs.target network.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=yago
+Group=yago
+WorkingDirectory=/home/yago/proyectos/PiCameraRecorder
+ExecStart=/home/yago/proyectos/PiCameraRecorder/.venv/bin/python -m picamera_recorder
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=45
+KillSignal=SIGTERM
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

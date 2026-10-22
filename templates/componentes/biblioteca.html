@@ -1,0 +1,14 @@
+<section class="card info-card" id="biblioteca" aria-labelledby="library-title">
+ <div class="card-head"><div class="head-title"><svg aria-hidden="true"><use href="#i-film"/></svg><h2 id="library-title">Grabaciones</h2></div><button type="button" class="btn" id="refresh-library"><svg aria-hidden="true"><use href="#i-refresh"/></svg>Actualizar</button></div>
+ <div class="library-body">
+  <p class="library-intro">Explora tus vídeos, reprodúcelos aquí o guarda una copia. Al cerrar cada archivo se prepara su índice para cargar y avanzar rápidamente, sin perder calidad.</p>
+  <p class="important-help">Marca con una estrella los vídeos que quieras conservar. Puedes proteger también el archivo en curso.</p>
+  <p id="delete-status" role="status" aria-live="polite"></p>
+  <div class="library-filters"><label>Fecha de sesión<input id="filter-date" type="date"></label><label class="session-filter">Sesión<select id="filter-session"><option value="">Todas las sesiones</option></select></label><button class="btn" id="clear-filters" type="button">Limpiar filtros</button></div>
+  <p id="library-status" class="library-status" role="status" aria-live="polite">Cargando grabaciones…</p>
+  <div id="playback" class="playback" hidden><div class="playback-head"><div><span class="field-label">REPRODUCIENDO</span><strong id="playback-name"></strong><small id="playback-session"></small></div><button type="button" class="btn" id="close-playback">Cerrar reproductor</button></div><video id="recording-video" controls playsinline preload="metadata" aria-label="Reproductor de grabaciones"></video><p id="playback-status" role="status" aria-live="polite">Pulsa reproducir para ver el vídeo.</p><section aria-label="Momentos con movimiento"><h3>Momentos con movimiento</h3><p id="motion-video-status" role="status"></p><div id="motion-events" class="recording-actions"></div></section><a class="btn" id="player-download" download>Descargar este vídeo</a></div>
+  <div class="recordings-table-wrap"><table class="recordings-table"><caption class="sr-only">Grabaciones conservadas en la Raspberry</caption><thead><tr><th scope="col">Archivo y sesión</th><th scope="col">Tamaño</th><th scope="col">Estado</th><th scope="col">Acciones</th></tr></thead><tbody id="recordings-rows"></tbody></table></div>
+  <div class="library-pagination"><button type="button" id="prev-recordings" class="btn" disabled>Anterior</button><span id="recordings-page">Página 1</span><button type="button" id="next-recordings" class="btn" disabled>Siguiente</button></div>
+  <p class="library-footnote">La limpieza automática conserva los vídeos con estrella. Si no puede liberar espacio sin borrarlos, se detendrá la grabación. Descargar una copia permite conservarla fuera de la Raspberry.</p>
+ </div>
+</section>
